@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Nubar</title>        
+
+ 
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lobster" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+ </head>
+<body>
+  <header><p id="nb"> &#43457;Join Nubar &#43458;</p></header>
+  
+ 
+
+  <div class="container">
+  
+     <input type="text" name="username" id="txtusername" placeholder="Enter Username" required>
+    <span id="username-error-message" class="error-message"></span>
+    
+    <input type="email" id="txtEmail" placeholder="Enter Email" name="uname" required>
+   <!--  <span id="email-error-message" ></span> -->
+<p id="email-error-messages" class="error-message"></p>           
+            <input id="txtPassword" type="password" placeholder="Enter Password" name="psw" required>
+   <div id="load" >
+    
+    <img width="60px" height="60px" src="../svg/loading.gif">
+  </div>
+ 
+    <p id="error-messages" class="error-message" style="color:gray">Password should be more than 8 caracter</p>          
+             <button type="submit" class="btn-primary" style="visibility:visible;" id="btnSignUp" class="signupbtn" >&#128077;Sign Up</button>
+            <button type="submit" class="btn-primary" id="back" onclick="window.location.assign('../index.html');" class="signupbtn" >Back To Login<!-- <img id="gif" style="width:100px;visibility: none;"  src="svg/loading.gif" ></img> --></button>
+              
+            
+             
+           </div>
+ 
+  
+           <script type="text/javascript" src="register.controller.js"></script>
+
+         </body>
+         </html>
