@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+body{
+	background: #edf0f1;
+	padding: 170px 0 0 0;
+}
+header ,textarea,button,#Tbody{
+	font-family: 'Great Vibes', cursive;
+font-family: 'Lobster', cursive;
+}
+
+header{
+	width:100%;
+	height: 160px;
+	position:fixed;
+	padding:5px 10px 15px 10px;
+	font-size: 15px;
+	top:0;
+	left:0;
+	z-index:5;
+	background-color:#25b99a;
+	box-shadow:0px 4px 8px rgba(44,62,80,0.15);
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius: 10px;  
+
+}
+header textarea{
+	width:100%;
+	height: 100px;
+	float: left;
+	padding: 10px;
+
+	font-size: 15px;
+	font-weight: 400;
+	margin: none;
+	text-indent:18px;
+	color:#fff;
+	background:rgba(255,255,255,0.2);
+	border-top-right-radius: 25px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius:25px; 
+	border-bottom-left-radius:5px;
+	
+	border:0px;
+	box-shadow: none;
+	outline: none;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+
+}
+header textarea::-webkit-input-placeholder{
+	color:rgba(255,255,255,.75);
+}
+header textarea::-moz-placeholder{
+	color:rgba(255,255,255,.75);
+}
+header textarea::-ms-placeholder{
+	color:rgba(255,255,255,.75);
+}
+header textarea::-o-placeholder{
+	color:rgba(255,255,255,.75);
+}
+header button{
+	width:50px;
+	height: 50px;
+	border-radius:25px;
+    border:0px;
+    background: #fff;
+    box-shadow: 0px 6px 10px rgba(44,62,80,0.5); 
+    outline:none;
+    cursor: pointer;
+    position:absolute;
+	top:150px;
+	right:25px;
+	z-index: 10;
+
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+	
+}
+#Tbody{
+	float:left;
+	width: 100%;
+	padding:15px;
+    top:100px;
+   }
+
+header button svg{
+	width:16px;
+	height:16px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin:-8px 0 0 -8px;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+}
+
+header button svg .fill{
+fill:#25b99a;
+}
+
+ul.posts{
+	width:90%;
+	/*float:left;*/
+
+}
+ul.posts li{
+     width:90%;
+     /*float:left;*/
+    /* text-align: center;
+    */
+     margin:0 0 10px 0;
+     padding:15px 10px 10px 15px;
+     height:50px;
+     background:#fff; 
+     border-radius: 25px;
+     box-shadow:0px 1px 2px rgba(44,62,888,0.10);
+}
+
+ul.posts li:last-of-type{
+	margin:0;
+}
+
+header h4{
+
+}

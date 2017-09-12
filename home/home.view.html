@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  -->
+  <title>Nubar</title>
+
+  <!--stylesheets-->
+ <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <link rel="stylesheet" type="text/css" href="home.css">
+   <link rel="stylesheet" type="text/css" href="../app-content/user.css">
+  <link rel="stylesheet" type="text/css" href="../personalize/personalize.css">
+   <!-- <link rel="stylesheet" type="text/css" href="../login/login.css"> -->
+ <link type="text/javascript" src="../app-content/user.css">
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script> -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+ --><script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<!--  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js"></script> -->
+<!-- <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js" ></script>
+ -->
+
+ <!-- 
+ <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script> -->
+
+
+<!-- <link rel="manifest"  href="/manifest.json">
+ --></head>
+
+
+<body >
+
+
+  <header id="allhead">
+   
+ <div id="mySidenav2" class="sidenav dom" style="left: 0;" >
+  <div class="imgcontainer">
+    
+
+ <p id="actvusr">Active Users</p>
+
+            <ul id="userlist" class='list-group dom'  style="bottom-margin:50px">          
+        
+    
+          
+           <div class="middle" >
+             <!-- <div class="text" ><p>Hello world</p></div> -->
+           </div> 
+            
+            </div>
+  
+   </div>
+</div>
+
+
+
+
+    <div id="mySidenav" class="sidenav dom" style="right: 0;">
+  <div class="imgcontainer">
+    
+<div class="imgcontainer" >
+<p>profile</p>                      
+        <img src="../svg/uploadprofilepic.png" alt="Avatar" class="avatar" id="proimg"  >  
+          <div id="imgloader" >
+    
+    <img width="30px" height="30px" src="../svg/loading.gif">
+  </div>
+<script type="text/javascript"> 
+     function imgloader(){
+        document.getElementById("imgloader").style.visibility="visible";
+        $('#imgloader').delay(10000).fadeOut();
+      
+      };
+    </script>          
+        <button class="btn" style="top:20px;right:100px;color:black" onclick="imgloader();">Set</button> 
+            <button class="btn" onclick="document.getElementById('uploadprofilepic').click();" style="top:20px;left:100px;color:black">Img</button>
+         
+        <input type='file'  id="uploadprofilepic" style="display: none" />  
+           <div class="middle" >
+            <!--  <div class="text dom" id="chngimg" ><p>Change Image</p></div> -->
+      
+           </div> 
+               
+                 <p id="uname"></p> 
+                 
+             </div>
+ 
+    </div>
+
+    <div id="profile">
+       <p id="file-error-message dom" class="error-message"></p>
+
+        
+         
+ 
+
+
+          <div class="dropdown-content dom" id=chatcolor-dropdown-content >
+
+ <div id="fontcode" class="form-group">
+ <select class="form-control dom" id="setfontcode">
+     
+           <option type="radio" name="font" id="select1" class="into-toggle-chatcolor-button" selected>Select Font</option>
+      <!-- <option type="radio" name="font" id="san2" value="Lobster, cursive" class="into-toggle-chatcolor-button">Default</option> -->
+       
+      <option type="radio" name="font" id="san3" value="Impact,Charcoal,sans-serif" class="into-toggle-chatcolor-button">Charcoal</option>
+      <option type="radio" name="font" id="san4" value="Courier New" class="into-toggle-chatcolor-button">Courier</option>
+      <option type="radio"  name="font" id="san5" value="cursive" class="into-toggle-chatcolor-button">Cursive</option>
+      <!-- <option type="radio"  name="font" id="san6" value="italic ,Open Sans, serif" class="into-toggle-chatcolor-button">Open Sans</option>
+      <option type="radio"  name="font" id="san7" value="italic small-caps bold 16px/2 cursive" class="into-toggle-chatcolor-button">Small Caps</option>
+            <option type="radio"  name="font" id="san8" value="Great Vibes, cursive" class="into-toggle-chatcolor-button" >Great Vibes</option> -->
+    
+</select>
+       </div>
+        
+          <div id="colorcode" class="form-group dom">
+ 
+      <select class="form-control" id="setcolorcode">
+            <option type="radio" name="color" id="select2" value="Impact,Charcoal,sans-serif" class="into-toggle-chatcolor-button" selected>Select Color</option>
+                <option type="radio"  name="color" id="default" value="#333351" class="into-toggle-chatcolor-button">Default</option> 
+      <option type="radio" name="color" id="magenta" value="#ff3385" class="into-toggle-chatcolor-button">Magenta</option>
+      <option type="radio" name="color" id="tarquishe" value="#aeeeee" class="into-toggle-chatcolor-button">Tarquishe Blue</option>
+      <option type="radio"  name="color" id="auburn" value="#A52A2A" class="into-toggle-chatcolor-button">Auburn</option>
+      <option type="radio"  name="color" id="green" value="#99ff66" class="into-toggle-chatcolor-button">Green</option>
+      <option type="radio"  name="color" id="pink" value="pink" class="into-toggle-chatcolor-button">Pink</option>
+      <option type="radio"  name="color" id="skyblue" value="skyblue" class="into-toggle-chatcolor-button">Sky Blue</option>
+                   <option type="radio"  name="color" id="blueviolate" value="#8A2BE2" class="into-toggle-chatcolor-button" >Purple</option>       
+      <option type="radio"  name="color" id="yellowlemon" value="rgb(173, 255, 41)" class="into-toggle-chatcolor-button">Yellow Lemon</option>
+      <option type="radio"  name="color" id="darkslateblue" value="#483D8B" class="into-toggle-chatcolor-button">Dark Magenta</option>
+
+      <option type="radio"  name="color" id="darkmagenta" value="#ff00ff" class="into-toggle-chatcolor-button">Fusion blue</option>
+      </select>
+      </div>
+
+      <p style="color:#333351;" >Select Color and Click Set Color</p><button onclick="window.location.reload();" id="setcolor" class="dom" style="width: 140px">Set Color</button>
+      
+      </div>
+
+  
+      
+           <button id="chatcolor-dropdown" class="dom">Personalize</button>
+<!-- <button id="letsgo" href="../home/home.view.html">&#9754; Lets Go</button> -->
+
+  
+   </div>
+   </div>
+
+<p id="nb" >&#43457; Nubar &#43458;</p>
+ <div id="options" >
+        
+      
+       <img src="../svg/user-32.ico" class="op" onclick="openNav()"></img>
+                 
+        <img class="op" src="../svg/003-chat.png" onclick="openNav2()">
+
+         
+               <img class="op"  href="javascript:void(0)" onclick="closeNav()" src="../svg/../svg/005-plus.png"> 
+      <img class="op" id="btnLogout" src="../svg/001-exit-1.png">
+
+      </div> 
+
+</header>    
+
+       
+    
+</ul>
+</div>
+ </div>
+
+
+  
+  
+
+  <div id="load" >
+    
+    <img width="30px" height="30px" src="../svg/loading.gif">
+  </div>
+<script type="text/javascript"> 
+     function gif(){
+        document.getElementById("load").style.visibility="visible";
+        $('#load').delay(300).fadeOut();
+        
+      };
+    </script>
+ <div id="scroll" class="dom">
+ 
+ <ul id="messageList" class='list-group'  style="bottom-margin:50px">
+</ul></div>
+<textarea name="Text1" cols="5" rows="1"  style="resize: none;overflow-y: scroll;" type="text" placeholder="Post Something" id="messageText"></textarea>
+    <button id="scrollbutton" class="btn"   onclick="bal();gif();"><img id="scrollimg"  src="../svg/images.png"></button>
+    <button id="submit" class="btn" onclick="bal();gif();"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 286.054 286.054" style="enable-background:new 0 0 286.054 286.054;" xml:space="preserve">
+     <g>
+      <path class="fill" d="M143.027,0C64.031,0,0,64.04,0,143.027c0,78.996,64.031,143.027,143.027,143.027
+      c78.987,0,143.027-64.031,143.027-143.027C286.045,64.04,222.014,0,143.027,0z M143.027,259.236
+      c-64.183,0-116.209-52.026-116.209-116.209s52.026-116.2,116.209-116.2c64.174,0,116.209,52.017,116.209,116.2
+      S207.201,259.236,143.027,259.236z M196.832,125.149h-35.936V89.392c0-4.934-4.005-8.939-8.939-8.939h-17.878
+      c-4.943,0-8.939,4.005-8.939,8.939v35.757H89.401c-4.952,0-8.957,4.005-8.957,8.939v17.878c0,4.943,4.005,8.939,8.957,8.939h35.748
+      v35.676c0,4.934,3.996,8.93,8.939,8.93h17.878c4.934,0,8.939-3.996,8.939-8.93v-35.676h35.936c4.952,0,8.957-3.996,8.957-8.939
+      v-17.878C205.789,129.162,201.775,125.149,196.832,125.149z"></path>
+    </g>
+  </svg>
+
+</button>
+</div>
+<!-- <footer id="textareacarry" style="position: absolute;background-color:black;height: 150px" >
+</footer> -->
+
+
+ <script type="text/javascript" src="home.controller.js"></script>
+
+  <script type="text/javascript" src="firebase-messaging-sw.js"></script>
+  <script type="text/javascript" src="../cordova.js"></script>
+<script type="text/javascript" src="../app-content/user.js"></script>
+      
+      </div>
+      </body>
+
+    </html>
