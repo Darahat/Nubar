@@ -1,7 +1,7 @@
 
 Hello people.
 Please check it
-<img src="Nubar/poster.jpg" alt="Smiley face" height="542" width="342"> 
+<img src="Nubar/poster.jpg" alt="Hello" height="642" width="542"> 
 
 How to use GIF
  
