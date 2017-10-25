@@ -1,10 +1,10 @@
   // var config = {
-  //   apiKey: "AIzaSyCtzPNSpAe4j-kOAs3l2DPaFA9MKYs2WE8",
-  //   authDomain: "fir-project-7d60d.firebaseapp.com",
-  //   databaseURL: "https://fir-project-7d60d.firebaseio.com",
-  //   projectId: "fir-project-7d60d",
-  //   storageBucket: "fir-project-7d60d.appspot.com",
-  //   messagingSenderId: "626154445141"
+  //   apiKey: " give your's",
+  //   authDomain: "give your's",
+  //   databaseURL: "give your's",
+  //   projectId: "give your's",
+  //   storageBucket: "give your's",
+  //   messagingSenderId: "give your's"
   // };
   // firebase.initializeApp(config);
 
