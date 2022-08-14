@@ -7,10 +7,10 @@
 
 var config = {
   apiKey: "give your's",
-  authDomain: "fir-project-7d60d.firebaseapp.com",
-  databaseURL: "https://fir-project-7d60d.firebaseio.com",
-  projectId: "fir-project-7d60d",
-  storageBucket: "fir-project-7d60d.appspot.com",
+  authDomain: "give your's",
+  databaseURL: "give your's",
+  projectId: "give your's",
+  storageBucket: "give your's",
   messagingSenderId: "give your's"
 };
 
